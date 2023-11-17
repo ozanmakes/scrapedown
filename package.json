@@ -1,0 +1,23 @@
+{
+  "name": "scrapedown",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20231025.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6",
+    "wrangler": "3.16.0"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.1.11",
+    "@mozilla/readability": "^0.4.4",
+    "hono": "^3.10.1",
+    "linkedom": "^0.16.4",
+    "zod": "^3.22.4"
+  }
+}
