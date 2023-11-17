@@ -1,4 +1,6 @@
-# Cloudflare Worker Page Scraper
+<img align="right" width="300"  src="https://github.com/osener/scrapedown/assets/111265/cc059686-c452-4982-82c9-023c7696699b">
+
+# scrapedown
 
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/osener/scrapedown)
 
@@ -10,16 +12,17 @@ This project is a Cloudflare worker designed to scrape web pages and extract use
 - Extract metadata such as title, byline, excerpt, and more.
 - Convert HTML content to clean markdown format.
 - Handle requests with optional markdown formatting.
+- Remove everything but the content (Reader Mode)
 
 ## Usage
 
-To use this worker, send a GET request to the worker's endpoint with the `url` query parameter specifying the page to be scraped. Optionally, you can include the `markdown` query parameter to specify whether the content should be returned in markdown format (`true` or `false`).
+To use this worker, send a GET request to the worker's endpoint with the `url` query parameter specifying the page to be scraped. Optionally, you can include the `markdown` query parameter to specify whether the content should be returned in markdown format (default: `true`).
 e
 
 ### Example Request
 
-```http
-GET /?url=https://example.com&markdown=true
+```
+GET https://<worker-name>.workers.dev/?url=https://example.com&markdown=true
 ```
 
 ### Example Response
@@ -39,3 +42,15 @@ GET /?url=https://example.com&markdown=true
   }
 }
 ```
+
+## Deployment
+
+To deploy this Cloudflare worker, you have two options:
+
+1. Use Wrangler CLI:
+
+   ```sh
+   npx wrangler deploy
+   ```
+
+2. Click the "Deploy to Cloudflare Workers" button at the top of this README.
