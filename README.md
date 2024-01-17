@@ -62,11 +62,11 @@ Run in a docker container by first building the image and then running the conta
 Run the commands below from the project root.
 
 ```
-docker compose build
-docker compose up -d
+docker compose -f docker-compose-dev.yaml build
+docker compose -f docker-compose-dev.yaml up -d
 ```
 
-Modifications to your running container can be made in the `docker-compose.yaml`.
+Modifications to your running container can be made in the `docker-compose-dev.yaml`.
 
 ### Example usage with Docker
 
