@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install production dependencies and wrangler.
-RUN npm install --only=production
+RUN npm install --only=development
 RUN npm install -g wrangler
 
 # Copy the local code to the container
