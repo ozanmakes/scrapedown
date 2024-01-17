@@ -6,5 +6,5 @@ services:
     ports:
       - '8787:8787'
     environment:
-      - NODE_ENV=dev
+      - NODE_ENV=development
     restart: unless-stopped
