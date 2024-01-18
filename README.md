@@ -54,3 +54,22 @@ To deploy this Cloudflare worker, you have two options:
    ```
 
 2. Click the "Deploy to Cloudflare Workers" button at the top of this README.
+
+## Deployment with Docker
+
+Run in a docker container by first building the image and then running the container.
+
+Run the commands below from the project root.
+
+```
+docker compose -f docker-compose-dev.yaml build
+docker compose -f docker-compose-dev.yaml up -d
+```
+
+Modifications to your running container can be made in the `docker-compose-dev.yaml`.
+
+### Example usage with Docker
+
+```
+GET http://<IP ADDR>:8787/?url=https://example.com&markdown=true
+```

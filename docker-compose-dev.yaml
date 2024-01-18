@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    container_name: scrapedown
+    ports:
+      - '8787:8787'
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
